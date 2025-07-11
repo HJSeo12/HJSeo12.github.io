@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>개인 포트폴리오</title>
+  <title>홍길동 포트폴리오</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Noto Sans KR', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
     header {
       background-color: #2c3e50;
@@ -18,10 +22,19 @@
       text-align: center;
       padding: 2rem 1rem;
     }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     section {
       max-width: 800px;
       margin: 2rem auto;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -35,38 +48,103 @@
     ul {
       padding-left: 1.2rem;
     }
+    .to-top {
+      margin-top: 2rem;
+      text-align: right;
+    }
+    .to-top a {
+      font-size: 0.9rem;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .to-top a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-  <header>
+  <header id="top">
     <h1>홍길동 포트폴리오</h1>
-    <p>프론트엔드 개발자 | 창의성과 신뢰를 바탕으로 성장하는 개발자</p>
+    <nav>
+      <a href="#about">자기소개</a> |
+      <a href="#projects">주요 프로젝트</a> |
+      <a href="#contact">연락처</a> |
+      <a href="#resume">이력</a>
+    </nav>
   </header>
 
-  <section>
+  <section id="about">
     <h2>자기소개</h2>
-    <p>안녕하세요. 웹 개발을 사랑하며 사용자의 경험을 최우선으로 생각하는 개발자 홍길동입니다. 실용적이고 깔끔한 UI/UX를 구현하는 데 관심이 많습니다.</p>
+    <p>
+      안녕하세요. 저는 사용자 중심의 인터페이스 설계와 기능 구현에 열정을 가진 프론트엔드 개발자 홍길동입니다. HTML, CSS, JavaScript를 기반으로 한 UI 개발에 능숙하며, React를 중심으로 하는 컴포넌트 기반 개발과 상태 관리에 대한 이해도 갖추고 있습니다.
+    </p>
+    <p>
+      최근에는 Next.js, TypeScript, Tailwind CSS 등의 최신 기술을 학습하고 있으며, 개인 프로젝트에 적극 활용하고 있습니다. Git, Jira, Notion 등을 활용한 협업 경험도 있으며, 코드 리뷰와 문서화에 익숙합니다.
+    </p>
+    <div class="to-top">
+      <a href="#top">⬆ 맨 위로 이동</a>
+    </div>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>주요 프로젝트</h2>
     <ul>
-      <li><strong>React Todo App</strong> - 일정 관리 기능 구현, localStorage 연동</li>
-      <li><strong>포트폴리오 웹사이트</strong> - HTML/CSS 기반 정적 페이지</li>
+      <li>
+        <strong>[React ToDo 앱]</strong><br/>
+        할 일 추가, 삭제, 필터링 기능 포함. localStorage에 데이터 저장, 반응형 UI 적용.
+      </li>
+      <li>
+        <strong>[팀 프로젝트 - 일정 공유 앱]</strong><br/>
+        Firebase 기반 인증 및 데이터 저장. 캘린더 형태의 일정 관리 웹앱. Git 협업과 코드 리뷰 경험 포함.
+      </li>
+      <li>
+        <strong>[이 포트폴리오 웹사이트]</strong><br/>
+        HTML과 CSS를 활용한 정적 웹사이트. 명확한 레이아웃, 섹션 분리, 부드러운 스크롤 구현.
+      </li>
     </ul>
+    <div class="to-top">
+      <a href="#top">⬆ 맨 위로 이동</a>
+    </div>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>연락처</h2>
-    <p>📧 이메일: hong@example.com</p>
-    <p>🔗 GitHub: <a href="https://github.com/hong" target="_blank">github.com/hong</a></p>
+    <p>
+      📧 이메일: <strong>hong@example.com</strong><br/>
+      📱 전화번호: 010-1234-5678<br/>
+      🔗 GitHub: <a href="https://github.com/hong" target="_blank">github.com/hong</a><br/>
+      💼 LinkedIn: <a href="https://linkedin.com/in/hong" target="_blank">linkedin.com/in/hong</a>
+    </p>
+    <p>
+      채용 및 협업 제안은 언제든 환영합니다!
+    </p>
+    <div class="to-top">
+      <a href="#top">⬆ 맨 위로 이동</a>
+    </div>
   </section>
 
-  <section>
+  <section id="resume">
     <h2>이력</h2>
-    <p>한양대학교 컴퓨터공학과 졸업</p>
-    <p>코드스테이츠 프론트엔드 부트캠프 수료</p>
+    <p>
+      <strong>학력</strong><br/>
+      - 한양대학교 컴퓨터공학과 졸업 (2019.03 ~ 2023.02)<br/>
+      - 교내 경진대회 2회 수상
+    </p>
+    <p>
+      <strong>교육 이수</strong><br/>
+      - 코드스테이츠 프론트엔드 부트캠프 수료 (2023.03 ~ 2023.08)<br/>
+      - 프로젝트 5개, 모의 면접 4회, 팀 협업 실습 포함
+    </p>
+    <p>
+      <strong>자격 및 기타</strong><br/>
+      - 정보처리기사 보유<br/>
+      - TOEIC 880점<br/>
+      - 기술 블로그 운영 중
+    </p>
+    <div class="to-top">
+      <a href="#top">⬆ 맨 위로 이동</a>
+    </div>
   </section>
 
 </body>
